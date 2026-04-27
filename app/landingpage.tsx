@@ -152,12 +152,14 @@ function Hero() {
           <SectionLabel>One Platform</SectionLabel>
         </motion.div>
 
-        <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-bold text-white leading-tight tracking-tight mb-2">
-          Stop Wondering.
-        </motion.h1>
-        <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Start Knowing.
-        </motion.h1>
+        <motion.div className="flex flex-col items-center uppercase italic">
+          <motion.h1 variants={fadeUp} className="text-5xl md:text-7xl font-black text-white leading-none tracking-tighter mb-1 drop-shadow-2xl">
+            STOP WONDERING.
+          </motion.h1>
+          <motion.h1 variants={fadeUp} className="text-5xl md:text-8xl font-black leading-none tracking-tighter mb-8 bg-gradient-to-b from-white via-zinc-300 to-zinc-700 bg-clip-text text-transparent drop-shadow-2xl">
+            START KNOWING.
+          </motion.h1>
+        </motion.div>
 
         <motion.p variants={fadeUp} className="text-zinc-300 text-base md:text-lg max-w-xl leading-relaxed mb-8">
           One Platform is a strategic reporting system for leadership teams — giving you real-time clarity on what matters, so you can move faster and decide smarter.
@@ -467,7 +469,7 @@ function UseCases() {
               <SectionHeading dark>Built for every kind of team</SectionHeading>
             </motion.div>
             <motion.p variants={fadeUp} className="text-zinc-400 text-sm max-w-xs md:text-right leading-relaxed">
-              Whether you're 10 people or 10,000 — One Platform scales with you.
+              Whether you&apos;re 10 people or 10,000 — One Platform scales with you.
             </motion.p>
           </div>
         </motion.div>
@@ -547,19 +549,19 @@ function UseCases() {
 const plans = [
   {
     name: "Starter",
-    price: "$29",
+    price: "$49",
     period: "/mo",
-    desc: "For small teams getting started with strategic reporting.",
-    features: ["Up to 5 projects", "Basic dashboard", "PDF export", "Email support"],
+    desc: "3 Users included.",
+    features: ["Up to 5 projects", "Basic Reports", "Project & Snapshot Tracking"],
     cta: "Get Started",
     highlight: false,
   },
   {
     name: "Business",
-    price: "$99",
+    price: "$149",
     period: "/mo",
-    desc: "For growing teams that need full visibility and control.",
-    features: ["Unlimited projects", "Executive dashboard", "Public sharing", "Action management", "Priority support"],
+    desc: "15 Users included.",
+    features: ["Up to 25 projects", "Everything in Starter", "All KPIs", "PDF/Excel Exports", "Public Share Links"],
     cta: "Start Free Trial",
     highlight: true,
   },
@@ -567,8 +569,8 @@ const plans = [
     name: "Enterprise",
     price: "Custom",
     period: "",
-    desc: "For large organizations with complex governance needs.",
-    features: ["Everything in Business", "SSO & SAML", "Audit logs", "Custom integrations", "Dedicated CSM"],
+    desc: "Unlimited Users.",
+    features: ["Unlimited projects", "Custom Reports", "Dedicated Support"],
     cta: "Contact Sales",
     highlight: false,
   },
@@ -583,7 +585,7 @@ function Pricing() {
           className="text-center mb-14"
         >
           <motion.div variants={fadeUp}><SectionLabel dark>Pricing</SectionLabel></motion.div>
-          <motion.div variants={fadeUp}><SectionHeading dark>Simple, transparent pricing</SectionHeading></motion.div>
+          <motion.div variants={fadeUp}><SectionHeading dark>Subscription Plans</SectionHeading></motion.div>
           <motion.div variants={fadeUp}><SectionSub dark>No hidden fees. No surprises. Cancel anytime.</SectionSub></motion.div>
         </motion.div>
 
@@ -687,7 +689,7 @@ function CTA() {
             Get Started Today
           </motion.p>
           <motion.h2 variants={fadeUp} className="text-3xl md:text-5xl font-bold text-white tracking-tight leading-tight mb-5">
-            Start knowing what's happening in your organization.
+            Start knowing what&apos;s happening in your organization.
           </motion.h2>
           <motion.p variants={fadeUp} className="text-zinc-300 text-base mb-10 leading-relaxed">
             Join 500+ leadership teams who replaced status meetings with One Platform. Set up in minutes, not months.

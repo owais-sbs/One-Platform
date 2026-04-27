@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants, TargetAndTransition } from "framer-motion";
 
-const container = {
+const container: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
@@ -10,7 +10,7 @@ const container = {
   },
 };
 
-const item = {
+const item: Variants = {
   hidden: { opacity: 0, y: 40 },
   show: {
     opacity: 1,
@@ -19,7 +19,7 @@ const item = {
   },
 };
 
-const buttonHover = {
+const buttonHover: TargetAndTransition = {
   scale: 1.05,
   transition: { type: "spring", stiffness: 200 },
 };
@@ -84,12 +84,14 @@ export default function Hero() {
         </motion.div>
 
         {/* Heading */}
-        <motion.h1 variants={item} className="text-6xl md:text-8xl font-black text-white leading-none tracking-tight mb-2">
-          Stop Wondering.
-        </motion.h1>
-        <motion.h1 variants={item} className="text-6xl md:text-8xl font-black leading-none tracking-tight mb-8 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Start Knowing.
-        </motion.h1>
+        <motion.div className="flex flex-col items-center uppercase italic">
+          <motion.h1 variants={item} className="text-5xl md:text-7xl font-black text-white leading-none tracking-tighter mb-1 drop-shadow-2xl">
+            STOP WONDERING.
+          </motion.h1>
+          <motion.h1 variants={item} className="text-5xl md:text-8xl font-black leading-none tracking-tighter mb-8 bg-gradient-to-b from-white via-zinc-300 to-zinc-700 bg-clip-text text-transparent drop-shadow-2xl">
+            START KNOWING.
+          </motion.h1>
+        </motion.div>
 
         {/* Subtext */}
         <motion.p variants={item} className="text-zinc-400 text-lg md:text-xl max-w-2xl leading-relaxed mb-12">
